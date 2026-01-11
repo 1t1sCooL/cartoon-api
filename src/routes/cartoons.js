@@ -1,12 +1,10 @@
-const express = require('express');
-const { getCartoons, searchCartoons } = require('../controllers/cartoons'); // Исправлено на cartoons
+const express = require("express");
+const { getCartoons, searchCartoons } = require("../controllers/cartoons");
 
 const router = express.Router();
 
-// Получить все мультфильмы
-router.get('/', getCartoons);
+router.get("/", getCartoons);
 
-// Поиск мультфильмов
-router.get('/search', searchCartoons);
+router.get("/search", searchCartoons);
 
 module.exports = router;
