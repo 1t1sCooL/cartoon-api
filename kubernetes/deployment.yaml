@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cartoon-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cartoon-api
+  template:
+    metadata:
+      labels:
+        app: cartoon-api
+    spec:
+      containers:
+        - name: cartoon-api
+          image: 1t1scool/cartoonapi:latest
+          ports:
+            - containerPort: 5000
+          env:
+            - name: MONGO_URI
+              valueFrom:
+                secretKeyRef:
+                  name: mongo-uri-secret
+                  key: MONGO_URI
+            - name: PORT
+              value: "5000"
