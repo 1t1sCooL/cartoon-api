@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cartoon-api
+  name: cartoonapi
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cartoon-api
+      app: cartoonapi
   template:
     metadata:
       labels:
-        app: cartoon-api
+        app: cartoonapi
     spec:
       containers:
-        - name: cartoon-api
+        - name: cartoonapi
           image: 1t1scool/cartoonapi:latest
           ports:
             - containerPort: 5000

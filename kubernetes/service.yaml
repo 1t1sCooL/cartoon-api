@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: cartoon-api-service
+  name: cartoonapi-service
 spec:
   selector:
-    app: cartoon-api
+    app: cartoonapi
   ports:
     - protocol: TCP
       port: 80

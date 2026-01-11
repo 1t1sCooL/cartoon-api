@@ -7,6 +7,6 @@ resources:
   - ingress.yaml
 
 images:
-  - name: cartoon-api
-    newName: cartoon-api
+  - name: cartoonapi
+    newName: cartoonapi
     newTag: latest
